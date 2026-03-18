@@ -37,7 +37,7 @@ const Navbar = () => {
   return (
     <nav className="relative z-20 w-full px-6 py-8 md:px-12 flex justify-between items-center">
       <div className="flex items-center gap-2 text-white">
-        <img src="https://raw.githubusercontent.com/KNJ86/Agrow/refs/heads/main/src/Agrow_BI.png" alt="Agrow Logo" className="h-10 md:h-12 object-contain" referrerPolicy="no-referrer" />
+        <img src="https://raw.githubusercontent.com/KNJ86/Agrow/main/src/Agrow_BI.png" alt="Agrow Logo" className="h-10 md:h-12 object-contain" referrerPolicy="no-referrer" />
       </div>
       
       <div className="hidden md:flex items-center gap-3">
@@ -233,17 +233,20 @@ const Service = () => {
     {
       title: "Value Chain Optimization",
       desc: "종자부터 유통까지 전체 밸류체인을 개선하여 최적의 효율을 달성합니다.",
-      tags: ["종자/육묘", "재배관리", "수확/가공", "유통/판매"]
+      tags: ["종자/육묘", "재배관리", "수확/가공", "유통/판매"],
+      image: "https://images.unsplash.com/photo-1592982537447-7440770cbfc9?q=80&w=1000&auto=format&fit=crop"
     },
     {
       title: "현장분석 기반 적정기술 도입",
       desc: "현장 분석을 통해 가장 적절한 Ag-Tech를 접목시켜 농업의 효율을 증대시킵니다.",
-      tags: ["농작업 대행", "데이터 의사결정", "현장 관리"]
+      tags: ["농작업 대행", "데이터 의사결정", "현장 관리"],
+      image: "https://images.unsplash.com/photo-1586771107445-d3ca888129ff?q=80&w=1000&auto=format&fit=crop"
     },
     {
       title: "Smart Farming",
       desc: "IoT와 데이터를 결합한 첨단 스마트팜 구축 솔루션을 제공합니다.",
-      tags: ["스마트팜 구축", "IoT 데이터", "정밀 농업"]
+      tags: ["스마트팜 구축", "IoT 데이터", "정밀 농업"],
+      image: "https://images.unsplash.com/photo-1530836361253-ee6121881b94?q=80&w=1000&auto=format&fit=crop"
     }
   ];
 
@@ -268,17 +271,27 @@ const Service = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="p-10 rounded-[3rem] border border-white/10 bg-white/5 hover:bg-white/10 transition-all group"
+              className="relative group h-[500px] rounded-[3rem] overflow-hidden border border-white/10"
             >
-              <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-8 group-hover:bg-white group-hover:text-[#0f251a] transition-all">
-                <ArrowUpRight className="w-8 h-8" />
-              </div>
-              <h3 className="text-3xl font-bold mb-4">{s.title}</h3>
-              <p className="text-white/60 mb-8 leading-relaxed">{s.desc}</p>
-              <div className="flex flex-wrap gap-2">
-                {s.tags.map(tag => (
-                  <span key={tag} className="px-4 py-1.5 bg-white/10 rounded-full text-xs font-medium">{tag}</span>
-                ))}
+              <img 
+                src={s.image} 
+                alt={s.title} 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+              
+              <div className="relative h-full p-10 flex flex-col justify-end">
+                <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center mb-8 group-hover:bg-white group-hover:text-[#0f251a] transition-all">
+                  <ArrowUpRight className="w-8 h-8" />
+                </div>
+                <h3 className="text-3xl font-bold mb-4">{s.title}</h3>
+                <p className="text-white/80 mb-8 leading-relaxed line-clamp-3">{s.desc}</p>
+                <div className="flex flex-wrap gap-2">
+                  {s.tags.map(tag => (
+                    <span key={tag} className="px-4 py-1.5 bg-white/20 backdrop-blur-md rounded-full text-xs font-medium">{tag}</span>
+                  ))}
+                </div>
               </div>
             </motion.div>
           ))}
@@ -412,13 +425,13 @@ const Contact = () => {
               <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-sm">
                 <Mail className="w-5 h-5" />
               </div>
-              <p className="text-lg font-medium">contact@agrow.com</p>
+              <p className="text-lg font-medium">ceo@a-grow.kr</p>
             </div>
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-sm">
                 <Phone className="w-5 h-5" />
               </div>
-              <p className="text-lg font-medium">+82 02-1234-5678</p>
+              <p className="text-lg font-medium">+82-33-910-0038</p>
             </div>
           </div>
         </div>
@@ -453,7 +466,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 mb-24">
             <div>
               <div className="flex items-center gap-2 text-white mb-8">
-                <img src="Agrow_BI.png" alt="Agrow Logo" className="h-10 object-contain brightness-0 invert" referrerPolicy="no-referrer" />
+                <img src="https://raw.githubusercontent.com/KNJ86/Agrow/main/src/Agrow_BI.png" alt="Agrow Logo" className="h-10 object-contain brightness-0 invert" referrerPolicy="no-referrer" />
               </div>
               <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-white mb-8 leading-tight">
                 Grow What Matters. <br />Join the Future of Agriculture.
@@ -498,8 +511,13 @@ const Footer = () => {
             </div>
           </div>
           
-          <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
-            <p className="text-white/30 text-sm">© 2024 Agrow Inc. All Rights Reserved.</p>
+          <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+            <div className="space-y-2">
+              <p className="text-white font-bold">주식회사 에이그로우</p>
+              <p className="text-white/50 text-sm">사업자 등록번호 : 292-86-03541 | 대표 : 박영민</p>
+              <p className="text-white/50 text-sm">강원특별자치도 춘천시 퇴계농공로 96, 비동</p>
+              <p className="text-white/30 text-xs pt-4">© 2024 Agrow Inc. All Rights Reserved.</p>
+            </div>
             <div className="flex gap-8 text-white/30 text-sm">
               <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
