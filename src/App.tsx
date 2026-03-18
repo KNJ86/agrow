@@ -37,7 +37,7 @@ const Navbar = () => {
   return (
     <nav className="relative z-20 w-full px-6 py-8 md:px-12 flex justify-between items-center">
       <div className="flex items-center gap-2 text-white">
-        <img src="https://github.com/KNJ86/Agrow/blob/main/src/Agrow_BI.png" alt="Agrow Logo" className="h-10 md:h-12 object-contain" referrerPolicy="no-referrer" />
+        <img src="https://raw.githubusercontent.com/KNJ86/Agrow/refs/heads/main/src/Agrow_BI.png" alt="Agrow Logo" className="h-10 md:h-12 object-contain" referrerPolicy="no-referrer" />
       </div>
       
       <div className="hidden md:flex items-center gap-3">
