@@ -22,10 +22,3 @@ export default defineConfig(({mode}) => {
     },
   };
 });
-import { defineConfig } from 'vite'
-import react from '@vitejs/react-swc'
-
-export default defineConfig({
-  plugins: [react()],
-  base: '/Agrow/', // 예: '/agrow-web/' (양쪽에 슬래시 필수)
-})
