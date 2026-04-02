@@ -670,35 +670,6 @@ const Footer = ({ lang }: { lang: 'KOR' | 'ENG' | 'IDN' }) => {
                 ))}
               </div>
             </div>
-
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-12">
-              <div>
-                <h4 className="text-white/40 text-xs font-bold uppercase tracking-widest mb-6">{lang === 'KOR' ? 'Company' : lang === 'ENG' ? 'Company' : 'Perusahaan'}</h4>
-                <ul className="space-y-4 text-white/70">
-                  <li><a href="#about" className="hover:text-white transition-colors">{lang === 'KOR' ? 'About Us' : lang === 'ENG' ? 'About Us' : 'Tentang Kami'}</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">{lang === 'KOR' ? 'Philosophy' : lang === 'ENG' ? 'Philosophy' : 'Filosofi'}</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">{lang === 'KOR' ? 'Leadership' : lang === 'ENG' ? 'Leadership' : 'Kepemimpinan'}</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">{lang === 'KOR' ? 'Milestones' : lang === 'ENG' ? 'Milestones' : 'Pencapaian'}</a></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-white/40 text-xs font-bold uppercase tracking-widest mb-6">{lang === 'KOR' ? 'Service' : lang === 'ENG' ? 'Service' : 'Layanan'}</h4>
-                <ul className="space-y-4 text-white/70">
-                  <li><a href="#service" className="hover:text-white transition-colors">{lang === 'KOR' ? 'Total Solution' : lang === 'ENG' ? 'Total Solution' : 'Solusi Total'}</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Value Chain</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">FaaS</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Smart Farming</a></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-white/40 text-xs font-bold uppercase tracking-widest mb-6">Contact</h4>
-                <ul className="space-y-4 text-white/70">
-                  <li><a href="#contact" className="hover:text-white transition-colors">{lang === 'KOR' ? 'Inquiry' : lang === 'ENG' ? 'Inquiry' : 'Pertanyaan'}</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">{lang === 'KOR' ? 'Support' : lang === 'ENG' ? 'Support' : 'Dukungan'}</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">{lang === 'KOR' ? 'Partnership' : lang === 'ENG' ? 'Partnership' : 'Kemitraan'}</a></li>
-                </ul>
-              </div>
-            </div>
           </div>
           
           <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
