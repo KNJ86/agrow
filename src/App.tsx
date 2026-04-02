@@ -357,7 +357,7 @@ const Service = ({ lang }: { lang: 'KOR' | 'ENG' | 'IDN' }) => {
         ? "We monitor and control the environment of greenhouses or open fields in real-time through IoT sensor networks. AI analyzes the collected big data to maintain optimal growth conditions, realizing both labor reduction and quality uniformity."
         : "Kami memantau dan mengendalikan lingkungan rumah kaca atau lahan terbuka secara real-time melalui jaringan sensor IoT. AI menganalisis data besar yang dikumpulkan untuk menjaga kondisi pertumbuhan yang optimal, mewujudkan pengurangan tenaga kerja dan keseragaman kualitas.",
       tags: lang === 'KOR' ? ["스마트팜 구축", "IoT 데이터", "정밀 농업"] : lang === 'ENG' ? ["Smart Farm Build", "IoT Data", "Precision Ag"] : ["Bangun Pertanian Cerdas", "Data IoT", "Pertanian Presisi"],
-      image: "https://images.unsplash.com/photo-1530836361253-ee6121881b94?q=80&w=1000&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1560493676-04071c5f467b?q=80&w=1000&auto=format&fit=crop"
     }
   ];
 
@@ -577,20 +577,24 @@ const News = ({ lang }: { lang: 'KOR' | 'ENG' | 'IDN' }) => {
       </div>
 
       <div className="divide-y divide-neutral-200">
-        {news.map((item, i) => (
+        {news.filter(item => item.link && item.link !== '#').map((item, i) => (
           <motion.div 
             key={i}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            onClick={() => item.link !== '#' && window.open(item.link, '_blank')}
+            onClick={() => window.open(item.link, '_blank')}
             className="py-10 flex flex-col md:flex-row justify-between items-start md:items-center group cursor-pointer"
           >
             <div className="flex items-center gap-8 mb-4 md:mb-0">
               <span className="text-neutral-400 font-mono">{item.date}</span>
               <span className="px-4 py-1 bg-neutral-100 rounded-full text-xs font-bold uppercase tracking-wider">{item.category}</span>
             </div>
-            <h3 className="text-2xl md:text-4xl font-bold tracking-tight group-hover:translate-x-4 transition-transform duration-500">{item.title}</h3>
+            <h3 className="text-2xl md:text-4xl font-bold tracking-tight group-hover:translate-x-4 transition-transform duration-500">
+              <a href={item.link} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                {item.title}
+              </a>
+            </h3>
             <div className="hidden md:flex w-12 h-12 rounded-full border border-neutral-200 items-center justify-center group-hover:bg-[#0f251a] group-hover:text-white transition-all">
               <ArrowUpRight className="w-5 h-5" />
             </div>
