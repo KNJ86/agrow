@@ -540,13 +540,13 @@ const News = ({ lang }: { lang: 'KOR' | 'ENG' | 'IDN' }) => {
   const news = [
     {
       date: "2024.11.21",
-      title: lang === 'KOR' ? "에이그로우, 인도네시아 스마트팜 시장 공략 가속화" : lang === 'ENG' ? "Agrow accelerates its push into the Indonesian smart farm market" : "Agrow mempercepat penetrasinya ke pasar pertanian cerdas Indonesia",
+      title: lang === 'KOR' ? "에이그로우 등 강원지역 공적개발원조 사업 진입 지원 프로그램 공모 선정" : lang === 'ENG' ? "Selection for Open Call for Public Development Assistance (ODA) Project Entry Support Programs in Gangwon Region, Including Aigrow" : "Selection for Open Call for Public Development Assistance (ODA) Project Entry Support Programs in Gangwon Region, Including Aigrow",
       category: "Global",
       link: "https://www.kado.net/news/articleView.html?idxno=2038424"
     },
     {
       date: "2024.11.15",
-      title: lang === 'KOR' ? "에이그로우, '2024 스마트농업 박람회' 참가" : lang === 'ENG' ? "Agrow participates in '2024 Smart Agriculture Expo'" : "Agrow berpartisipasi dalam '2024 Smart Agriculture Expo'",
+      title: lang === 'KOR' ? "강원특별자치도, "ODA 사업 진입 지원, 최종 3개 기업 선정"" : lang === 'ENG' ? "Gangwon Special Self-Governing Province, "Support for Entry into ODA Projects, Final 3 Companies Selected"" : "Gangwon Special Self-Governing Province, "Support for Entry into ODA Projects, Final 3 Companies Selected"",
       category: "Event",
       link: "https://www.gukjenews.com/news/articleView.html?idxno=3527010"
     },
