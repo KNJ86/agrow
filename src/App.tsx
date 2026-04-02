@@ -114,7 +114,7 @@ const Hero = ({ lang, setLang }: { lang: 'KOR' | 'ENG' | 'IDN', setLang: (l: 'KO
       >
         {/* Background Video/Image with Overlay */}
         <img 
-          src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=2000&auto=format&fit=crop" 
+          src="https://previews.dropbox.com/p/thumb/AC8LwfOC2mVrwVYFMQaejOrcWfiNA2D7CdBfMioTWjlMDeaTo2oN8Yw7qXF_BXxYayC2VTGkPKfXF6iX6fwTpKLgWhsP3icSzV2nnhmTDeeiouYXqYM_QX-vY_u784e3f2ay78sI89nmwcZGvBAix7993qgkypv5NvW13k1oTW94M7ONqLNt4BQQuc1rACd-KFFH6zqxgyoG6kKzJOhJjonCxws-uiSDjz4gpbr7FgNiHwFSCh6iSpd9U3yFR6FbQk03EHCugHTIggzQpU6UBSEP5r-m73BKZu8Tz3M9P-Eh0w/p.pngauto=format&fit=crop" 
           alt="Smart Farming" 
           className="absolute inset-0 w-full h-full object-cover z-0 brightness-50"
           referrerPolicy="no-referrer"
@@ -523,7 +523,7 @@ const Global = ({ lang }: { lang: 'KOR' | 'ENG' | 'IDN' }) => {
             className="relative aspect-video lg:aspect-square rounded-[4rem] overflow-hidden"
           >
             <img 
-              src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1000&auto=format&fit=crop" 
+              src="https://previews.dropbox.com/p/thumb/AC-pAxN3w0KrSCnFKRVA1BozV0779l7mtRKvXoYhdm1Nz1rpa-NKXc1n-J1R58qxIb6xLzJRTHba3cC89Zc7KryVnLPJSk751YSL-0Lg0kpoHKnGizPAfMAUds4YeKhtbbwXRL_nNH7KogtWYuYkfIfIkkTe31FpC6Gel8-NgmNADBY2BIkccqSQ0eKEcfnhuPGNLu60hQeufyAFNgAbAcqUpAie_2vs9klW_BxlkbKdXLF5Q4Z6k9n080HNMu0gYUze-Gcqg17vt1goObKgAIuXqFjdiTVA8jYu7PIVq1aX7A/p.jpeg&auto=format&fit=crop" 
               className="absolute inset-0 w-full h-full object-cover"
               alt="Global Agriculture"
               referrerPolicy="no-referrer"
@@ -668,7 +668,7 @@ const Footer = ({ lang }: { lang: 'KOR' | 'ENG' | 'IDN' }) => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 mb-24">
             <div>
               <div className="flex items-center gap-2 text-white mb-8">
-                <img src="https://raw.githubusercontent.com/KNJ86/Agrow/main/src/Agrow_BI.png" alt="Agrow Logo" className="h-10 object-contain brightness-0 invert" referrerPolicy="no-referrer" />
+                <img src="https://previews.dropbox.com/p/thumb/AC95FWeFjxBI0IuxWYm-_HTmO5qGJ-0_VSKkif-q4TKnCsxV5KXp1y_Ox38mrb3b5vwYY85ZTKka0Wa_eEwq8VYh3IOxVI0ZSSyvghdLHPgoHtxS56Qhwi3EYeEoYwFmiZLY6SPQcY1MSrlK3Ka57WoVsuje7YRn60OzKMBjzg-s30zxw-3wuahIeClINRojfyEhErycLk5GA2rD6bjbUeucG9_YPVp7xA6InUmetSKf1sZsqn6k2ZMJ0x97Ugizi0e1FJOEL_KIKrE_xLaBqb-fvzh5RVgviUlxnNqXshYxCqBWc-hTAXYkNRp0CRT5-davcn_ABOrGYcywIhC-gvw7/p.png?is_prewarmed=truekr" alt="Agrow Logo" className="h-10 object-contain brightness-0 invert" referrerPolicy="no-referrer" />
               </div>
               <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-white mb-8 leading-tight">
                 Grow What Matters. <br />Join the Future of Agriculture.
