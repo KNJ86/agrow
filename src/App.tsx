@@ -114,7 +114,7 @@ const Hero = ({ lang, setLang }: { lang: 'KOR' | 'ENG' | 'IDN', setLang: (l: 'KO
       >
         {/* Background Video/Image with Overlay */}
         <img 
-          src="https://previews.dropbox.com/p/thumb/AC8LwfOC2mVrwVYFMQaejOrcWfiNA2D7CdBfMioTWjlMDeaTo2oN8Yw7qXF_BXxYayC2VTGkPKfXF6iX6fwTpKLgWhsP3icSzV2nnhmTDeeiouYXqYM_QX-vY_u784e3f2ay78sI89nmwcZGvBAix7993qgkypv5NvW13k1oTW94M7ONqLNt4BQQuc1rACd-KFFH6zqxgyoG6kKzJOhJjonCxws-uiSDjz4gpbr7FgNiHwFSCh6iSpd9U3yFR6FbQk03EHCugHTIggzQpU6UBSEP5r-m73BKZu8Tz3M9P-Eh0w/p.pngauto=format&fit=crop" 
+          src="https://ucd12961dd0d66779692c10da66e.previews.dropboxusercontent.com/p/thumb/AC-p6BScxXnMLYYR_jZ1unbxA8Qx_BzmRnRQr2Szgz3jkRx92XrOtCfMpxfzFx_X-8MLutXkr6AaHEEbsFyj-5tXDCCWF3NlbPiRlEI8TvcJGf75IkUi8hls8fKqOVZzwkbCm9hPMwJDsScqYe0kVL7FND-iApiVnOtVOZYhTvlII9i1oNi5p9h65gGjulQEXYaDjPbPTZJdiRIdh3ScZw5WvYmaf1sHim-GSLFfF8rjOlAH9SuiV3AlI3etbedK5NF4A92s1-Tnn9z23zF50sVakpKSMHTEcqtAPjflvuEGPvS9ynsP6ybAUZe6NtkEzVFhgprXJLoSF6l1CEU8VqAKZze6ENFvOuB64WynOmSUFn8mMseAvqhECnd6YUzCHP-St4wpfR63beguDEDQkn4Y7joYOqRcgyx7_wWE1jC2gN3EkICH7qaBMGN1a3s503LNYIUMdVnLNRvxgd3jLoAC-fU_sJb8uq6QLKMu-gCUSNv6Fbg7z24QKF5k-0hLsnwaiDAFOEm1jDgmJKDCXO1kxFgVc-7LGKOReLnUDgkHukcXxVCsooq9Bn1vpytNuHA/p.png?is_prewarmed=true&auto=format&fit=crop" 
           alt="Smart Farming" 
           className="absolute inset-0 w-full h-full object-cover z-0 brightness-50"
           referrerPolicy="no-referrer"
@@ -523,7 +523,7 @@ const Global = ({ lang }: { lang: 'KOR' | 'ENG' | 'IDN' }) => {
             className="relative aspect-video lg:aspect-square rounded-[4rem] overflow-hidden"
           >
             <img 
-              src="https://previews.dropbox.com/p/thumb/AC-pAxN3w0KrSCnFKRVA1BozV0779l7mtRKvXoYhdm1Nz1rpa-NKXc1n-J1R58qxIb6xLzJRTHba3cC89Zc7KryVnLPJSk751YSL-0Lg0kpoHKnGizPAfMAUds4YeKhtbbwXRL_nNH7KogtWYuYkfIfIkkTe31FpC6Gel8-NgmNADBY2BIkccqSQ0eKEcfnhuPGNLu60hQeufyAFNgAbAcqUpAie_2vs9klW_BxlkbKdXLF5Q4Z6k9n080HNMu0gYUze-Gcqg17vt1goObKgAIuXqFjdiTVA8jYu7PIVq1aX7A/p.jpeg&auto=format&fit=crop" 
+              src="https://previews.dropbox.com/p/thumb/AC8tcW7mgJQQYeu_TIl3tPw3CXFsstbtaP6cpAhqjleMymL3WBHBGlJiDtr5woWW9Irf_od4x93xhVHlPH7TAoSZHfI77LPVeTsU7cnL38-nat2OaFwiSln4xCk5OgH4D1thoXWjketGghoIFpz2oo_rqF6mr4DAAH5PfRB2frTPwQQaj_ozEKCZPPSB3Oyt42q5sWje8K1NmsFdXTF0tqfF_l2H5mx4JtmX1bDZDwDKqrGJi2Q-17culNKxj-FItk8RGTrmIEitc_Sh9ityUy0C4QAVUsfgY9eVCX2ic3f0sADVc1mHk4QjwKMx_juIVnn4lsL0CX-FbG5PfsQ3Jj-tpWiBaSjllKFqydfjRxvfU_W5E0JZGKV_RVfA1f-M5_PlPnbQFRAGiEGyKeB48o5L/p.jpeg?is_prewarmed=true&auto=format&fit=crop" 
               className="absolute inset-0 w-full h-full object-cover"
               alt="Global Agriculture"
               referrerPolicy="no-referrer"
