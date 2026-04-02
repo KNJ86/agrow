@@ -547,7 +547,7 @@ const News = ({ lang }: { lang: 'KOR' | 'ENG' | 'IDN' }) => {
     {
       date: "2024.11.15",
       title: lang === 'KOR' ? '강원특별자치도, "ODA 사업 진입 지원, 최종 3개 기업 선정"' : lang === 'ENG' ? 'Gangwon Special Self-Governing Province, "Support for Entry into ODA Projects, Final 3 Companies Selected"' : 'Gangwon Special Self-Governing Province, "Support for Entry into ODA Projects, Final 3 Companies Selected"',
-      category: "Event",
+      category: "Global",
       link: "https://www.gukjenews.com/news/articleView.html?idxno=3527010"
     }
   ];
