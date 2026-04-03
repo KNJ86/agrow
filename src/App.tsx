@@ -37,7 +37,7 @@ const Navbar = ({ lang, setLang }: { lang: 'KOR' | 'ENG' | 'IDN', setLang: (l: '
   return (
     <nav className="relative z-20 w-full px-6 py-8 md:px-12 flex justify-between items-center">
       <div className="flex items-center gap-2 text-white">
-        <img src="https://previews.dropbox.com/p/thumb/AC95FWeFjxBI0IuxWYm-_HTmO5qGJ-0_VSKkif-q4TKnCsxV5KXp1y_Ox38mrb3b5vwYY85ZTKka0Wa_eEwq8VYh3IOxVI0ZSSyvghdLHPgoHtxS56Qhwi3EYeEoYwFmiZLY6SPQcY1MSrlK3Ka57WoVsuje7YRn60OzKMBjzg-s30zxw-3wuahIeClINRojfyEhErycLk5GA2rD6bjbUeucG9_YPVp7xA6InUmetSKf1sZsqn6k2ZMJ0x97Ugizi0e1FJOEL_KIKrE_xLaBqb-fvzh5RVgviUlxnNqXshYxCqBWc-hTAXYkNRp0CRT5-davcn_ABOrGYcywIhC-gvw7/p.png?is_prewarmed=true" alt="Agrow Logo" className="h-10 md:h-12 object-contain" referrerPolicy="no-referrer" />
+        <img src="https://raw.githubusercontent.com/KNJ86/agrow/refs/heads/img/Agrow_BI.png" alt="Agrow Logo" className="h-10 md:h-12 object-contain" referrerPolicy="no-referrer" />
       </div>
       
       <div className="hidden md:flex items-center gap-3">
@@ -114,7 +114,7 @@ const Hero = ({ lang, setLang }: { lang: 'KOR' | 'ENG' | 'IDN', setLang: (l: 'KO
       >
         {/* Background Video/Image with Overlay */}
         <img 
-          src="https://ucd12961dd0d66779692c10da66e.previews.dropboxusercontent.com/p/thumb/AC-p6BScxXnMLYYR_jZ1unbxA8Qx_BzmRnRQr2Szgz3jkRx92XrOtCfMpxfzFx_X-8MLutXkr6AaHEEbsFyj-5tXDCCWF3NlbPiRlEI8TvcJGf75IkUi8hls8fKqOVZzwkbCm9hPMwJDsScqYe0kVL7FND-iApiVnOtVOZYhTvlII9i1oNi5p9h65gGjulQEXYaDjPbPTZJdiRIdh3ScZw5WvYmaf1sHim-GSLFfF8rjOlAH9SuiV3AlI3etbedK5NF4A92s1-Tnn9z23zF50sVakpKSMHTEcqtAPjflvuEGPvS9ynsP6ybAUZe6NtkEzVFhgprXJLoSF6l1CEU8VqAKZze6ENFvOuB64WynOmSUFn8mMseAvqhECnd6YUzCHP-St4wpfR63beguDEDQkn4Y7joYOqRcgyx7_wWE1jC2gN3EkICH7qaBMGN1a3s503LNYIUMdVnLNRvxgd3jLoAC-fU_sJb8uq6QLKMu-gCUSNv6Fbg7z24QKF5k-0hLsnwaiDAFOEm1jDgmJKDCXO1kxFgVc-7LGKOReLnUDgkHukcXxVCsooq9Bn1vpytNuHA/p.png?is_prewarmed=true&auto=format&fit=crop" 
+          src="https://raw.githubusercontent.com/KNJ86/agrow/refs/heads/img/fields.jpg&auto=format&fit=crop" 
           alt="Smart Farming" 
           className="absolute inset-0 w-full h-full object-cover z-0 brightness-50"
           referrerPolicy="no-referrer"
@@ -523,7 +523,7 @@ const Global = ({ lang }: { lang: 'KOR' | 'ENG' | 'IDN' }) => {
             className="relative aspect-video lg:aspect-square rounded-[4rem] overflow-hidden"
           >
             <img 
-              src="https://previews.dropbox.com/p/thumb/AC8tcW7mgJQQYeu_TIl3tPw3CXFsstbtaP6cpAhqjleMymL3WBHBGlJiDtr5woWW9Irf_od4x93xhVHlPH7TAoSZHfI77LPVeTsU7cnL38-nat2OaFwiSln4xCk5OgH4D1thoXWjketGghoIFpz2oo_rqF6mr4DAAH5PfRB2frTPwQQaj_ozEKCZPPSB3Oyt42q5sWje8K1NmsFdXTF0tqfF_l2H5mx4JtmX1bDZDwDKqrGJi2Q-17culNKxj-FItk8RGTrmIEitc_Sh9ityUy0C4QAVUsfgY9eVCX2ic3f0sADVc1mHk4QjwKMx_juIVnn4lsL0CX-FbG5PfsQ3Jj-tpWiBaSjllKFqydfjRxvfU_W5E0JZGKV_RVfA1f-M5_PlPnbQFRAGiEGyKeB48o5L/p.jpeg?is_prewarmed=true&auto=format&fit=crop" 
+              src="https://raw.githubusercontent.com/KNJ86/agrow/refs/heads/img/Indoensia.jpg&auto=format&fit=crop" 
               className="absolute inset-0 w-full h-full object-cover"
               alt="Global Agriculture"
               referrerPolicy="no-referrer"
@@ -656,7 +656,7 @@ const Footer = ({ lang }: { lang: 'KOR' | 'ENG' | 'IDN' }) => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 mb-24">
             <div>
               <div className="flex items-center gap-2 text-white mb-8">
-                <img src="https://previews.dropbox.com/p/thumb/AC95FWeFjxBI0IuxWYm-_HTmO5qGJ-0_VSKkif-q4TKnCsxV5KXp1y_Ox38mrb3b5vwYY85ZTKka0Wa_eEwq8VYh3IOxVI0ZSSyvghdLHPgoHtxS56Qhwi3EYeEoYwFmiZLY6SPQcY1MSrlK3Ka57WoVsuje7YRn60OzKMBjzg-s30zxw-3wuahIeClINRojfyEhErycLk5GA2rD6bjbUeucG9_YPVp7xA6InUmetSKf1sZsqn6k2ZMJ0x97Ugizi0e1FJOEL_KIKrE_xLaBqb-fvzh5RVgviUlxnNqXshYxCqBWc-hTAXYkNRp0CRT5-davcn_ABOrGYcywIhC-gvw7/p.png?is_prewarmed=truekr" alt="Agrow Logo" className="h-10 object-contain brightness-0 invert" referrerPolicy="no-referrer" />
+                <img src="https://raw.githubusercontent.com/KNJ86/agrow/refs/heads/img/Agrow_BI.png" alt="Agrow Logo" className="h-10 object-contain brightness-0 invert" referrerPolicy="no-referrer" />
               </div>
               <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-white mb-8 leading-tight">
                 Grow What Matters. <br />Join the Future of Agriculture.
