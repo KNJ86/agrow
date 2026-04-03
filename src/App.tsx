@@ -293,7 +293,7 @@ const About = ({ lang }: { lang: 'KOR' | 'ENG' | 'IDN' }) => {
           className="relative aspect-square rounded-[4rem] overflow-hidden"
         >
           <img 
-            src="https://raw.githubusercontent.com/KNJ86/agrow/refs/heads/img/fields.jpg" 
+            src="https://raw.githubusercontent.com/KNJ86/agrow/refs/heads/img/grain.JPG" 
             className="absolute inset-0 w-full h-full object-cover"
             alt="Agtech Innovation"
             referrerPolicy="no-referrer"
