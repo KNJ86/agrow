@@ -624,22 +624,51 @@ const Contact = ({ lang }: { lang: 'KOR' | 'ENG' | 'IDN' }) => {
           </div>
         </div>
 
-        <form className="space-y-6 bg-white p-10 rounded-[3rem] shadow-xl border border-neutral-100">
+          <form 
+          action="https://formspree.io/f/mzdkanyp" 
+          method="POST"
+          className="space-y-6 bg-white p-10 rounded-[3rem] shadow-xl border border-neutral-100"
+        >
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="space-y-2">
-              <label className="text-xs font-bold uppercase tracking-widest text-neutral-400">{lang === 'KOR' ? 'Name' : lang === 'ENG' ? 'Name' : 'Nama'}</label>
-              <input type="text" placeholder={lang === 'KOR' ? "이름" : lang === 'ENG' ? "Your Name" : "Nama Anda"} className="w-full px-6 py-4 bg-neutral-50 rounded-2xl border-none focus:ring-2 focus:ring-[#0f251a] transition-all" />
+              <label className="text-xs font-bold uppercase tracking-widest text-neutral-400">
+                {lang === 'KOR' ? 'Name' : lang === 'ENG' ? 'Name' : 'Nama'}
+              </label>
+              <input 
+                type="text" 
+                name="name" 
+                placeholder={lang === 'KOR' ? "이름" : lang === 'ENG' ? "Your Name" : "Nama Anda"} 
+                className="w-full px-6 py-4 bg-neutral-50 rounded-2xl border-none focus:ring-2 focus:ring-[#0f251a] transition-all" 
+                required
+              />
             </div>
             <div className="space-y-2">
               <label className="text-xs font-bold uppercase tracking-widest text-neutral-400">Email</label>
-              <input type="email" placeholder={lang === 'KOR' ? "이메일" : lang === 'ENG' ? "Your Email" : "Email Anda"} className="w-full px-6 py-4 bg-neutral-50 rounded-2xl border-none focus:ring-2 focus:ring-[#0f251a] transition-all" />
+              <input 
+                type="email" 
+                name="email" 
+                placeholder={lang === 'KOR' ? "이메일" : lang === 'ENG' ? "Your Email" : "Email Anda"} 
+                className="w-full px-6 py-4 bg-neutral-50 rounded-2xl border-none focus:ring-2 focus:ring-[#0f251a] transition-all" 
+                required
+              />
             </div>
           </div>
           <div className="space-y-2">
-            <label className="text-xs font-bold uppercase tracking-widest text-neutral-400">{lang === 'KOR' ? 'Message' : lang === 'ENG' ? 'Message' : 'Pesan'}</label>
-            <textarea rows={4} placeholder={lang === 'KOR' ? "문의 내용을 입력해주세요" : lang === 'ENG' ? "How can we help?" : "Bagaimana kami bisa membantu?"} className="w-full px-6 py-4 bg-neutral-50 rounded-2xl border-none focus:ring-2 focus:ring-[#0f251a] transition-all resize-none"></textarea>
+            <label className="text-xs font-bold uppercase tracking-widest text-neutral-400">
+              {lang === 'KOR' ? 'Message' : lang === 'ENG' ? 'Message' : 'Pesan'}
+            </label>
+            <textarea 
+              rows={4} 
+              name="message" 
+              placeholder={lang === 'KOR' ? "문의 내용을 입력해주세요" : lang === 'ENG' ? "How can we help?" : "Bagaimana kami bisa membantu?"} 
+              className="w-full px-6 py-4 bg-neutral-50 rounded-2xl border-none focus:ring-2 focus:ring-[#0f251a] transition-all resize-none"
+              required
+            ></textarea>
           </div>
-          <button className="w-full py-5 bg-[#0f251a] text-white rounded-2xl font-bold text-lg hover:bg-[#1a3a2f] transition-all">
+          <button 
+            type="submit" 
+            className="w-full py-5 bg-[#0f251a] text-white rounded-2xl font-bold text-lg hover:bg-[#1a3a2f] transition-all"
+          >
             {lang === 'KOR' ? '메시지 보내기' : lang === 'ENG' ? 'Send Message' : 'Kirim Pesan'}
           </button>
         </form>
