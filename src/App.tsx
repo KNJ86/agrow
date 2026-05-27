@@ -538,14 +538,26 @@ const Global = ({ lang }: { lang: 'KOR' | 'ENG' | 'IDN' }) => {
 
 const News = ({ lang }: { lang: 'KOR' | 'ENG' | 'IDN' }) => {
   const news = [
+        {
+      date: "2026.05.15",
+      title: lang === 'KOR' ? '에이그로우, 印尼 농업회사와 MOU 체결...해외사업 본격화' : lang === 'ENG' ? 'Agrow Signs MOU with Indonesian Agricultural Company... Launching Overseas Business in Full Swing' : 'Agrow Menandatangani MOU dengan Perusahaan Pertanian Indonesia... Meluncurkan Bisnis Luar Negeri dengan Lancar',
+      category: "Global",
+      link: "https://n.news.naver.com/mnews/article/009/0005680334?sid=101"
+    },
     {
-      date: "2024.11.21",
-      title: lang === 'KOR' ? '에이그로우 등 강원지역 공적개발원조 사업 진입 지원 프로그램 공모 선정' : lang === 'ENG' ? 'Selection for Open Call for Public Development Assistance (ODA) Project Entry Support Programs in Gangwon Region, Including Aigrow' : 'Selection for Open Call for Public Development Assistance (ODA) Project Entry Support Programs in Gangwon Region, Including Aigrow',
+      date: "2026.05.08",
+      title: lang === 'KOR' ? '에이그로우, 인도네시아 진출…글로벌 농업 밸류체인 사업 본격화' : lang === 'ENG' ? 'Agrow Enters Indonesia… Full-Scale Launch of Global Agricultural Value Chain Business' : 'Agrow Masuk Indonesia… Peluncuran Skala Penuh Bisnis Rantai Nilai Pertanian Global',
+      category: "Global",
+      link: "https://n.news.naver.com/mnews/article/087/0001191852?sid=102"
+    },
+    {
+      date: "2026.03.12",
+      title: lang === 'KOR' ? '에이그로우 등 강원지역 공적개발원조 사업 진입 지원 프로그램 공모 선정' : lang === 'ENG' ? 'Selection for Open Call for Public Development Assistance (ODA) Project Entry Support Programs in Gangwon Region, Including Agrow' : 'Selection for Open Call for Public Development Assistance (ODA) Project Entry Support Programs in Gangwon Region, Including Aigrow',
       category: "Global",
       link: "https://www.kado.net/news/articleView.html?idxno=2038424"
     },
     {
-      date: "2024.11.15",
+      date: "2026.03.12",
       title: lang === 'KOR' ? '강원특별자치도, "ODA 사업 진입 지원, 최종 3개 기업 선정"' : lang === 'ENG' ? 'Gangwon Special Self-Governing Province, "Support for Entry into ODA Projects, Final 3 Companies Selected"' : 'Gangwon Special Self-Governing Province, "Support for Entry into ODA Projects, Final 3 Companies Selected"',
       category: "Global",
       link: "https://www.gukjenews.com/news/articleView.html?idxno=3527010"
