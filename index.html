@@ -52,7 +52,7 @@
   <section style="padding:16px;scroll-snap-align:start;height:100vh;overflow:hidden;box-sizing:border-box">
     <div style="position:relative;min-height:90vh;border-radius:3rem;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between">
       <div style="position:absolute;inset:0;z-index:0">
-        <image-slot id="hero-bg" shape="rect" placeholder="1920×1080 이상, 가로형 · 인도네시아 논 현장 사진" src="assets/hero-field.jpg"></image-slot>
+        <img src="assets/hero-field.jpg" alt="인도네시아 논 현장" style="width:100%;height:100%;object-fit:cover;display:block">
       </div>
       <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center, rgba(0,0,0,.25) 0%, rgba(0,0,0,.55) 65%, rgba(0,0,0,.85) 100%), linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,.1) 35%, rgba(0,0,0,.8));z-index:1;pointer-events:none"></div>
 
@@ -102,7 +102,7 @@
       </div>
 
       <div style="position:relative;height:min(70vh, 560px);border-radius:2rem;overflow:hidden">
-        <image-slot id="about-photo" shape="rect" placeholder="회사/팀 또는 현장 사진"></image-slot>
+        <img src="assets/about-photo.jpg" alt="논 현장" style="width:100%;height:100%;object-fit:cover;display:block">
         <div style="position:absolute;bottom:16px;left:16px;right:16px;padding:18px;background:rgba(255,255,255,.9);backdrop-filter:blur(6px);border-radius:1.25rem;pointer-events:none">
           <p style="color:#0f251a;font-size:clamp(0.85rem,1.6vh,1.05rem);font-weight:500;font-style:italic;line-height:1.4;margin:0">{{t.about.photo_quote}}</p>
         </div>
@@ -122,7 +122,7 @@
         <div onClick="{{card.onClick}}" style="cursor:pointer;border-radius:2rem;overflow:hidden;position:relative;height:min(58vh,540px)">
           <div style="position:absolute;inset:0;overflow:hidden">
             <div style="position:absolute;inset:0;transition:transform .5s ease" style-hover="transform:scale(1.08)">
-              <image-slot id="{{card.imgId}}" shape="rect" placeholder="1000×1250 세로형"></image-slot>
+              <img src="{{card.imgSrc}}" alt="{{card.title}}" style="width:100%;height:100%;object-fit:cover;display:block">
             </div>
           </div>
           <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,.85) 0%, rgba(0,0,0,.35) 45%, rgba(0,0,0,.05) 70%);pointer-events:none"></div>
@@ -149,7 +149,7 @@
         <div onClick="{{closeSolution}}" style="position:absolute;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(4px)"></div>
         <div style="position:relative;width:100%;max-width:1200px;height:min(85vh,760px);overflow:hidden;border-radius:3rem;box-shadow:0 30px 80px rgba(0,0,0,.4)">
           <div style="position:absolute;inset:0">
-            <image-slot id="{{activeSolutionData.imgId}}-modal" shape="rect" placeholder="1000×1250 세로형"></image-slot>
+            <img src="{{activeSolutionData.imgModalSrc}}" alt="{{activeSolutionData.title}}" style="width:100%;height:100%;object-fit:cover;display:block">
           </div>
           <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,.9) 0%, rgba(0,0,0,.45) 45%, rgba(0,0,0,.05) 70%);pointer-events:none"></div>
           <button onClick="{{closeSolution}}" style="position:absolute;top:24px;right:24px;width:44px;height:44px;border-radius:999px;background:rgba(255,255,255,.18);backdrop-filter:blur(4px);border:none;color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:5">
@@ -190,7 +190,7 @@
         </div>
       </div>
       <div style="height:min(70vh,560px);border-radius:2rem;overflow:hidden;position:relative">
-        <image-slot id="global-photo" shape="rect" placeholder="1600×1600, 인도네시아 현장 사진"></image-slot>
+        <img src="assets/global-photo.webp" alt="인도네시아 현장" style="width:100%;height:100%;object-fit:cover;display:block">
       </div>
     </div>
   </section>
@@ -434,71 +434,85 @@ const COPY = {
     },
   },
   en: {
-    nav: { about: 'About', solution: '[TODO: EN]', global: 'Global', news: 'News', contact: 'Contact Us' },
+    nav: { about: 'About', solution: 'Solution', global: 'Global', news: 'News', contact: 'Contact Us' },
     hero: {
       badge: 'AGROW, a solution company designing sustainable agriculture through technology',
       sub: 'Redesigning the essence of agriculture with technology to build a sustainable food system.',
-      cta_primary: '[TODO: EN]', cta_secondary: '[TODO: EN]',
+      cta_primary: 'Partnership Inquiry', cta_secondary: 'View Solutions',
     },
     solution: {
-      label: 'Our Solution', headline: '[TODO: EN]', sub: '[TODO: EN]', detail_label: 'Solution Detail',
+      label: 'Our Solution',
+      headline: 'Connecting production conditions, cultivation management, and market linkage into one flow',
+      sub: 'Agrow standardizes the starting conditions of agriculture, manages the cultivation process with data, and connects the results directly to market trading conditions. When these three connect into a single flow, quality and income rise together.',
+      detail_label: 'Solution Detail',
       cards: [
-        { imgId: 'solution-1', title: 'Uniform Seedling Supply', tagline: '[TODO: EN]', desc: '[TODO: EN]', tags: ['[TODO: EN]'], detail: '[TODO: EN]' },
-        { imgId: 'solution-2', title: 'Decision Support Platform', tagline: '[TODO: EN]', desc: '[TODO: EN]', tags: ['[TODO: EN]'], detail: '[TODO: EN]' },
-        { imgId: 'solution-3', title: 'Quality-to-Market Linkage', tagline: '[TODO: EN]', desc: '[TODO: EN]', tags: ['[TODO: EN]'], detail: '[TODO: EN]' },
+        { imgId: 'solution-1', title: 'Uniform Seedling Supply', tagline: 'Standardizing the starting conditions of production',
+          desc: 'We supply seedlings with uniform variety and seedling condition to eliminate early growth variance. Only when the starting point is the same does all subsequent management and data become meaningful.',
+          tags: ['Variety/Seed Traceability', 'Standard Seedling Criteria', 'Healthy Seedling Selection & Supply', 'Traceability Linkage'],
+          detail: 'We track receiving, storage, sowing, and supply by variety on a Lot basis, applying standard sowing rates, seedling periods, and water management criteria. Seedlings are checked for size, uniformity, root development, and healthy-seedling ratio before supply, and each farm\u2019s supply volume and transplanting date are recorded and linked to later growth, harvest, and quality data. Compared to conventional direct-seeding or nursery-bed methods, this aims to lower labor time and material costs while reducing weather and pest risks.' },
+        { imgId: 'solution-2', title: 'Decision Support Platform', tagline: 'Recording the entire cultivation process and turning it into prescriptions',
+          desc: 'We gather weather, satellite, and sensor data to predict growth, turning it into work instructions that even elderly smallholders can follow as-is.',
+          tags: ['Data Integration', 'Growth Prediction', 'Mobile Work Instructions'],
+          detail: 'Weather information, IoT sensor logs, satellite imagery, and plot/soil data are accumulated in real time and aligned into a single input. Statistical and physics-based models are used together to predict growth stage, yield, and risk, and the results are converted into prescriptions for irrigation, fertilization, pest control, and harvest timing. Prescriptions are delivered via the messaging apps and mobile notifications most widely used locally.' },
+        { imgId: 'solution-3', title: 'Quality-to-Market Linkage', tagline: 'Turning quality into trading conditions',
+          desc: 'Well-grown results must return as better prices for farmers to keep participating. We connect production history and quality inspection results directly to buyers\u2019 trading conditions.',
+          tags: ['Demand-based Contracts', 'Key Quality Metrics', 'Grade-based Price Differentiation'],
+          detail: 'We reflect the variety, quality, volume, and delivery conditions required by buyers from the production-planning stage. Moisture content, foreign matter, variety mixing, milling yield, and head-rice ratio are measured, and production history and inspection results are linked by farm, plot, and Lot. Based on this data, grade-based price differentiation is applied, creating a structure where quality improvement returns as farmer income.' },
       ],
     },
     global: {
       label: 'Global Presence', headline_1: 'Indonesia &', headline_2: 'Beyond',
       sub: 'Starting with Indonesia, Agrow is expanding into the global agricultural market while also building smart farms in Korea.',
       handles: [
-        { num: '01', title: '[TODO: EN]', desc: '[TODO: EN]' },
-        { num: '02', title: '[TODO: EN]', desc: '[TODO: EN]' },
+        { num: '01', title: 'Building an Indonesia Base', desc: 'Selected Klaten, Central Java as a demonstration site; partnering with the leading local rice distributor and IPB University' },
+        { num: '02', title: 'Building Smart Farms in Korea', desc: 'Carrying out the plant factory manufacturing and installation project at the Gangwon Forest Bio Center' },
       ],
     },
     news: {
-      label: 'Latest Updates', headline: 'News', sub: '[TODO: EN]',
+      label: 'Latest Updates', headline: 'News', sub: 'Agrow\u2019s activities as covered in the media.',
       category_global: 'Global', category_domestic: 'Domestic',
       titles: [
         'Agrow Signs MOU with Indonesian Agricultural Company... Launching Overseas Business in Full Swing',
         'Agrow Enters Indonesia… Full-Scale Launch of Global Agricultural Value Chain Business',
-        '[TODO: EN]',
-        '[TODO: EN]',
+        'Agrow and Other Gangwon Companies Selected for ODA Project Entry Support Program',
+        'Gangwon Special Self-Governing Province: "Final 3 Companies Selected for ODA Project Entry Support"',
       ],
     },
     about: {
       label: 'About Agrow',
       quote: '"We redesign the essence of agriculture with technology against the most fundamental crisis of climate change."',
-      p1: '[TODO: EN]', p2: '[TODO: EN]', p3: '[TODO: EN]',
+      p1: 'Agrow is a combination of Agriculture and Grow. But what we grow in developing-country farming fields is not simply plants.',
+      p2: 'We build a standard of productivity that holds firm even amid climate change, technology that turns the uncertainty of conventional farming into data and quality standards, and a trading structure where smallholders are fairly rewarded for quality.',
+      p3: 'By analyzing uncertain environments and designing sustainable added value within them, we are redrawing the future of agriculturally vulnerable countries.',
       signature: 'Grow what matters. — Agrow',
       photo_quote: '"Redesigning the essence of agriculture with technology to shape the future of food systems."',
       values: [
-        { title: 'Field-centric', desc: '[TODO: EN]' },
-        { title: 'Data-driven', desc: '[TODO: EN]' },
+        { title: 'Field-centric', desc: 'We make decisions based on more than 14 years of hands-on experience in agricultural production and distribution' },
+        { title: 'Data-driven', desc: 'Turning experience into records, and records into prescriptions' },
       ],
     },
     contact: {
       headline_1: "Let's Grow", headline_2: 'Together',
       sub: 'Looking for partners to design the future of agriculture with Agrow. We look forward to solution inquiries and collaboration proposals.',
-      label_name: 'Name', label_company: '[TODO: EN]', label_email: 'Email', label_inquiry_type: '[TODO: EN]', label_message: 'Message',
-      inquiry_options: ['[TODO: EN]', '[TODO: EN]', '[TODO: EN]', '[TODO: EN]', '[TODO: EN]'],
-      consent_text: '[TODO: EN]', consent_link: '[Privacy Policy]',
+      label_name: 'Name', label_company: 'Company/Organization', label_email: 'Email', label_inquiry_type: 'Inquiry Type', label_message: 'Message',
+      inquiry_options: ['Solution Adoption', 'Business Partnership', 'Smart Farm Construction Inquiry', 'Careers', 'Other'],
+      consent_text: 'I agree to the collection and use of my personal information for handling this inquiry.', consent_link: '[Privacy Policy]',
       submit: 'Send Email',
     },
     policy: {
       privacy: { title: 'Privacy Policy', sections: [
-        { heading: '1. Information Collected', body: '[TODO: EN]' },
-        { heading: '2. Purpose of Use', body: '[TODO: EN]' },
-        { heading: '3. Retention Period', body: '[TODO: EN]' },
-        { heading: '4. Third-Party Disclosure', body: '[TODO: EN]' },
+        { heading: '1. Information Collected', body: 'We collect information you provide directly when submitting an inquiry, such as name, email, company/organization, inquiry type, and message.' },
+        { heading: '2. Purpose of Use', body: 'Used to receive and respond to inquiries, review partnership/business collaboration proposals, and respond to recruitment inquiries.' },
+        { heading: '3. Retention Period', body: 'Retained for one year after the inquiry is resolved, then destroyed without delay.' },
+        { heading: '4. Third-Party Disclosure', body: 'Personal information is not provided to third parties in principle, except where required by law.' },
         { heading: '5. Processing Vendor', body: 'Inquiries are received via Formspree.' },
-        { heading: '6. Your Rights', body: '[TODO: EN]' },
+        { heading: '6. Your Rights', body: 'You may request to view, correct, delete, or suspend processing of your personal information at any time.' },
         { heading: '7. Contact', body: 'ceo@a-grow.kr' },
       ] },
       terms: { title: 'Terms of Service', sections: [
-        { heading: '1. Purpose', body: '[TODO: EN]' },
-        { heading: '2. Content Use', body: '[TODO: EN]' },
-        { heading: '3. Disclaimer', body: '[TODO: EN]' },
+        { heading: '1. Purpose', body: 'These Terms govern the use of the website provided by AGROW Inc. ("the Company").' },
+        { heading: '2. Content Use', body: 'Copyright in the text, images, and other content posted on the website belongs to the Company or its rightful holders, and may not be reproduced or distributed without prior consent.' },
+        { heading: '3. Disclaimer', body: 'The Company strives for accuracy in the information posted on the website, but is not liable, to the extent permitted by law, for actions taken in reliance on it.' },
         { heading: '4. Contact', body: 'ceo@a-grow.kr' },
       ] },
     },
@@ -512,71 +526,85 @@ const COPY = {
     },
   },
   id: {
-    nav: { about: 'Tentang', solution: '[TODO: ID]', global: 'Global', news: 'Berita', contact: 'Hubungi Kami' },
+    nav: { about: 'Tentang', solution: 'Solusi', global: 'Global', news: 'Berita', contact: 'Hubungi Kami' },
     hero: {
       badge: 'AGROW, perusahaan solusi yang merancang pertanian berkelanjutan melalui teknologi',
       sub: 'Merancang ulang esensi pertanian dengan teknologi untuk membangun sistem pangan berkelanjutan.',
-      cta_primary: '[TODO: ID]', cta_secondary: '[TODO: ID]',
+      cta_primary: 'Hubungi untuk Kemitraan', cta_secondary: 'Lihat Solusi',
     },
     solution: {
-      label: 'Our Solution', headline: '[TODO: ID]', sub: '[TODO: ID]', detail_label: 'Detail Solusi',
+      label: 'Our Solution',
+      headline: 'Menghubungkan kondisi produksi, manajemen budidaya, dan keterkaitan pasar menjadi satu alur',
+      sub: 'Agrow menstandarisasi kondisi awal pertanian, mengelola proses budidaya dengan data, dan menghubungkan hasilnya langsung dengan kondisi perdagangan pasar. Ketika ketiganya menyatu dalam satu alur, kualitas dan pendapatan meningkat bersama.',
+      detail_label: 'Detail Solusi',
       cards: [
-        { imgId: 'solution-1', title: '[TODO: ID]', tagline: '[TODO: ID]', desc: '[TODO: ID]', tags: ['[TODO: ID]'], detail: '[TODO: ID]' },
-        { imgId: 'solution-2', title: '[TODO: ID]', tagline: '[TODO: ID]', desc: '[TODO: ID]', tags: ['[TODO: ID]'], detail: '[TODO: ID]' },
-        { imgId: 'solution-3', title: '[TODO: ID]', tagline: '[TODO: ID]', desc: '[TODO: ID]', tags: ['[TODO: ID]'], detail: '[TODO: ID]' },
+        { imgId: 'solution-1', title: 'Pasokan Bibit Seragam', tagline: 'Menstandarisasi kondisi awal produksi',
+          desc: 'Kami memasok bibit dengan varietas dan kondisi pembibitan yang seragam untuk menghilangkan variasi pertumbuhan awal. Hanya ketika titik awal sama, seluruh manajemen dan data selanjutnya menjadi bermakna.',
+          tags: ['Manajemen Riwayat Varietas/Benih', 'Standar Pembibitan', 'Seleksi & Pasokan Bibit Sehat', 'Keterkaitan Riwayat'],
+          detail: 'Kami melacak penerimaan, penyimpanan, penyemaian, dan pasokan per varietas berdasarkan Lot, menerapkan standar jumlah tanam, masa pembibitan, dan manajemen air. Bibit diperiksa untuk ukuran, keseragaman, perkembangan akar, dan rasio bibit sehat sebelum dipasok, dan volume pasokan serta tanggal tanam tiap petani dicatat dan dihubungkan dengan data pertumbuhan, panen, dan kualitas selanjutnya. Dibandingkan dengan metode tanam benih langsung atau persemaian konvensional, ini bertujuan menurunkan waktu kerja dan biaya bahan sekaligus mengurangi risiko cuaca dan hama.' },
+        { imgId: 'solution-2', title: 'Platform Dukungan Keputusan', tagline: 'Mencatat seluruh proses budidaya dan mengubahnya menjadi rekomendasi',
+          desc: 'Kami mengumpulkan data cuaca, satelit, dan sensor untuk memprediksi pertumbuhan, mengubahnya menjadi instruksi kerja yang dapat diikuti langsung bahkan oleh petani lansia.',
+          tags: ['Integrasi Data', 'Prediksi Pertumbuhan', 'Instruksi Kerja Seluler'],
+          detail: 'Informasi cuaca, log sensor IoT, citra satelit, serta data lahan dan tanah dikumpulkan secara real-time dan diselaraskan menjadi satu input. Model statistik dan model berbasis fisika digunakan bersama untuk memprediksi tahap pertumbuhan, hasil panen, dan risiko, dan hasilnya diubah menjadi rekomendasi waktu irigasi, pemupukan, pengendalian hama, dan panen. Rekomendasi disampaikan melalui aplikasi pesan dan notifikasi seluler yang paling banyak digunakan di lokasi setempat.' },
+        { imgId: 'solution-3', title: 'Keterkaitan Kualitas-Pasar', tagline: 'Mengubah kualitas menjadi kondisi perdagangan',
+          desc: 'Hasil yang ditanam dengan baik harus kembali sebagai harga yang lebih baik agar petani terus berpartisipasi. Kami menghubungkan riwayat produksi dan hasil pemeriksaan kualitas langsung dengan kondisi perdagangan perusahaan pembeli.',
+          tags: ['Kontrak Berbasis Permintaan', 'Pengukuran Kualitas Utama', 'Diferensiasi Harga Berdasarkan Grade'],
+          detail: 'Kami mencerminkan varietas, kualitas, volume, dan kondisi pengiriman yang diminta pembeli sejak tahap perencanaan produksi. Kadar air, benda asing, campuran varietas, rendemen giling, dan rasio beras kepala diukur, dan riwayat produksi serta hasil pemeriksaan dihubungkan per petani, lahan, dan Lot. Berdasarkan data ini, diferensiasi harga per grade diterapkan, menciptakan struktur di mana peningkatan kualitas kembali sebagai pendapatan petani.' },
       ],
     },
     global: {
       label: 'Global Presence', headline_1: 'Indonesia &', headline_2: 'Beyond',
       sub: 'Dimulai dengan Indonesia, Agrow merambah ke pasar pertanian global sekaligus membangun pertanian cerdas di Korea.',
       handles: [
-        { num: '01', title: '[TODO: ID]', desc: '[TODO: ID]' },
-        { num: '02', title: '[TODO: ID]', desc: '[TODO: ID]' },
+        { num: '01', title: 'Membangun Basis di Indonesia', desc: 'Memilih Klaten, Jawa Tengah sebagai lokasi percontohan; bermitra dengan distributor beras lokal terkemuka dan IPB University' },
+        { num: '02', title: 'Membangun Pertanian Cerdas di Korea', desc: 'Menjalankan proyek manufaktur dan instalasi pabrik tanaman di Gangwon Forest Bio Center' },
       ],
     },
     news: {
-      label: 'Latest Updates', headline: 'Berita', sub: '[TODO: ID]',
+      label: 'Latest Updates', headline: 'Berita', sub: 'Aktivitas Agrow yang diberitakan media.',
       category_global: 'Global', category_domestic: 'Domestic',
       titles: [
         'Agrow Menandatangani MOU dengan Perusahaan Pertanian Indonesia… Meluncurkan Bisnis Luar Negeri dengan Lancar',
         'Agrow Masuk Indonesia… Peluncuran Skala Penuh Bisnis Rantai Nilai Pertanian Global',
-        '[TODO: ID]',
-        '[TODO: ID]',
+        'Agrow dan Perusahaan Gangwon Lainnya Terpilih untuk Program Dukungan Masuk Proyek ODA',
+        'Provinsi Otonomi Khusus Gangwon: "3 Perusahaan Final Terpilih untuk Dukungan Masuk Proyek ODA"',
       ],
     },
     about: {
       label: 'About Agrow',
       quote: '"Kami merancang ulang esensi pertanian dengan teknologi untuk menghadapi krisis perubahan iklim yang paling mendasar."',
-      p1: '[TODO: ID]', p2: '[TODO: ID]', p3: '[TODO: ID]',
+      p1: 'Agrow adalah gabungan dari Agriculture dan Grow. Namun yang kami tumbuhkan di lahan pertanian negara berkembang bukan sekadar tanaman.',
+      p2: 'Kami membangun standar produktivitas yang tetap kokoh di tengah perubahan iklim, teknologi yang mengubah ketidakpastian pertanian konvensional menjadi data dan standar kualitas, serta struktur perdagangan di mana petani kecil dihargai secara adil atas kualitas.',
+      p3: 'Dengan menganalisis lingkungan yang tidak pasti dan merancang nilai tambah berkelanjutan di dalamnya, kami menggambar ulang masa depan negara-negara rentan pertanian.',
       signature: 'Grow what matters. — Agrow',
       photo_quote: '"Merancang ulang esensi pertanian dengan teknologi untuk masa depan sistem pangan."',
       values: [
-        { title: 'Berorientasi Lapangan', desc: '[TODO: ID]' },
-        { title: 'Berbasis Data', desc: '[TODO: ID]' },
+        { title: 'Berorientasi Lapangan', desc: 'Kami mengambil keputusan berdasarkan lebih dari 14 tahun pengalaman langsung di produksi dan distribusi pertanian' },
+        { title: 'Berbasis Data', desc: 'Mengubah pengalaman menjadi catatan, dan catatan menjadi rekomendasi' },
       ],
     },
     contact: {
       headline_1: 'Mari Tumbuh', headline_2: 'Bersama',
       sub: 'Mencari mitra untuk merancang masa depan pertanian bersama Agrow. Kami menantikan pertanyaan solusi dan proposal kolaborasi.',
-      label_name: 'Nama', label_company: '[TODO: ID]', label_email: 'Email', label_inquiry_type: '[TODO: ID]', label_message: 'Pesan',
-      inquiry_options: ['[TODO: ID]', '[TODO: ID]', '[TODO: ID]', '[TODO: ID]', '[TODO: ID]'],
-      consent_text: '[TODO: ID]', consent_link: '[Kebijakan Privasi]',
+      label_name: 'Nama', label_company: 'Perusahaan/Institusi', label_email: 'Email', label_inquiry_type: 'Jenis Pertanyaan', label_message: 'Pesan',
+      inquiry_options: ['Adopsi Solusi', 'Kemitraan Bisnis', 'Pertanyaan Pembangunan Smart Farm', 'Karier', 'Lainnya'],
+      consent_text: 'Saya setuju dengan pengumpulan dan penggunaan informasi pribadi saya untuk menangani pertanyaan ini.', consent_link: '[Kebijakan Privasi]',
       submit: 'Kirim Email',
     },
     policy: {
       privacy: { title: 'Kebijakan Privasi', sections: [
-        { heading: '1. Informasi yang Dikumpulkan', body: '[TODO: ID]' },
-        { heading: '2. Tujuan Penggunaan', body: '[TODO: ID]' },
-        { heading: '3. Masa Penyimpanan', body: '[TODO: ID]' },
-        { heading: '4. Pengungkapan ke Pihak Ketiga', body: '[TODO: ID]' },
+        { heading: '1. Informasi yang Dikumpulkan', body: 'Kami mengumpulkan informasi yang Anda masukkan langsung saat mengajukan pertanyaan, seperti nama, email, perusahaan/institusi, jenis pertanyaan, dan pesan.' },
+        { heading: '2. Tujuan Penggunaan', body: 'Digunakan untuk menerima dan menjawab pertanyaan, meninjau proposal kemitraan/kolaborasi bisnis, dan menanggapi pertanyaan rekrutmen.' },
+        { heading: '3. Masa Penyimpanan', body: 'Disimpan selama 1 tahun setelah pertanyaan selesai ditangani, kemudian dihapus tanpa penundaan.' },
+        { heading: '4. Pengungkapan ke Pihak Ketiga', body: 'Informasi pribadi pada prinsipnya tidak diberikan kepada pihak ketiga, kecuali diwajibkan oleh hukum.' },
         { heading: '5. Pihak Pemroses', body: 'Pertanyaan diterima melalui Formspree.' },
-        { heading: '6. Hak Anda', body: '[TODO: ID]' },
+        { heading: '6. Hak Anda', body: 'Anda dapat meminta untuk melihat, memperbaiki, menghapus, atau menghentikan pemrosesan informasi pribadi Anda kapan saja.' },
         { heading: '7. Kontak', body: 'ceo@a-grow.kr' },
       ] },
       terms: { title: 'Syarat Layanan', sections: [
-        { heading: '1. Tujuan', body: '[TODO: ID]' },
-        { heading: '2. Penggunaan Konten', body: '[TODO: ID]' },
-        { heading: '3. Penyangkalan', body: '[TODO: ID]' },
+        { heading: '1. Tujuan', body: 'Syarat ini mengatur penggunaan situs web yang disediakan oleh AGROW Inc. ("Perusahaan").' },
+        { heading: '2. Penggunaan Konten', body: 'Hak cipta atas teks, gambar, dan konten lain yang dipublikasikan di situs web adalah milik Perusahaan atau pemegang hak yang sah, dan tidak boleh digandakan atau didistribusikan tanpa izin sebelumnya.' },
+        { heading: '3. Penyangkalan', body: 'Perusahaan berupaya menjaga keakuratan informasi yang dipublikasikan di situs web, namun tidak bertanggung jawab, sejauh diizinkan oleh hukum, atas tindakan yang diambil berdasarkan kepercayaan terhadap informasi tersebut.' },
         { heading: '4. Kontak', body: 'ceo@a-grow.kr' },
       ] },
     },
@@ -684,7 +712,7 @@ class Component extends DCLogic {
       { label: t.hero.stat_field_label, value: t.hero.stat_field_value },
     ];
 
-    const solutionCards = t.solution.cards.map((c, i) => ({ ...c, onClick: () => this.openSolution(i) }));
+    const solutionCards = t.solution.cards.map((c, i) => ({ ...c, onClick: () => this.openSolution(i), imgSrc: `assets/${c.imgId}.webp` }));
 
     const newsItems = NEWS_META.map((m, i) => ({
       date: m.date,
@@ -694,7 +722,9 @@ class Component extends DCLogic {
     }));
 
     const activeIdx = this.state.solutionModalIndex;
-    const activeSolutionData = activeIdx !== null ? t.solution.cards[activeIdx] : { title: '', detail: '', tags: [], imgId: 'x' };
+    const activeSolutionData = activeIdx !== null
+      ? { ...t.solution.cards[activeIdx], imgModalSrc: `assets/${t.solution.cards[activeIdx].imgId}-modal.webp` }
+      : { title: '', detail: '', tags: [], imgId: 'x', imgModalSrc: '' };
 
     const activePolicyData = this.state.policyModalOpen ? t.policy[this.state.policyModalOpen] : { title: '', sections: [] };
 
