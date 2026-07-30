@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://agrow.dakggum.workers.dev/sitemap.xml
