@@ -1,0 +1,16 @@
+/* ───────────────────────────────────────────────────────────────────────────
+   Agrow — local brand fonts
+   Pretendard is the SINGLE family used across the product (Korean/Latin/숫자).
+   Variable axis: weight 45–920. Hierarchy is built with weight + size + tracking,
+   not by mixing in a serif or mono. jsDelivr CDN is loaded as a network fallback
+   in the HTML <head>.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/PretendardVariable.woff2") format("woff2-variations"),
+       url("fonts/PretendardVariable.woff2") format("woff2");
+}
