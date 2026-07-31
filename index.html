@@ -656,12 +656,36 @@ class Component extends DCLogic {
       clearTimeout(this._wheelLock);
       this._wheelLock = setTimeout(() => { this.isAnimating = false; }, 700);
     };
+    this.touchStartY = 0;
+    this.onTouchStart = (e) => { this.touchStartY = e.touches[0].clientY; };
+    this.onTouchMove = (e) => { e.preventDefault(); };
+    this.onTouchEnd = (e) => {
+      const el = this.rootRef.current;
+      if (!el || this.isAnimating) return;
+      const deltaY = this.touchStartY - e.changedTouches[0].clientY;
+      if (Math.abs(deltaY) < 40) return;
+      const dir = deltaY > 0 ? 1 : -1;
+      const current = Math.round(el.scrollTop / window.innerHeight);
+      const next = Math.min(Math.max(current + dir, 0), SECTION_COUNT - 1);
+      if (next === current) return;
+      this.isAnimating = true;
+      el.scrollTo({ top: next * window.innerHeight, behavior: 'smooth' });
+      this.setState({ sectionIndex: next });
+      clearTimeout(this._wheelLock);
+      this._wheelLock = setTimeout(() => { this.isAnimating = false; }, 700);
+    };
     this.rootRef.current?.addEventListener('scroll', this.onScroll);
     this.rootRef.current?.addEventListener('wheel', this.onWheel, { passive: false });
+    this.rootRef.current?.addEventListener('touchstart', this.onTouchStart, { passive: true });
+    this.rootRef.current?.addEventListener('touchmove', this.onTouchMove, { passive: false });
+    this.rootRef.current?.addEventListener('touchend', this.onTouchEnd, { passive: true });
   }
   componentWillUnmount() {
     this.rootRef.current?.removeEventListener('scroll', this.onScroll);
     this.rootRef.current?.removeEventListener('wheel', this.onWheel);
+    this.rootRef.current?.removeEventListener('touchstart', this.onTouchStart);
+    this.rootRef.current?.removeEventListener('touchmove', this.onTouchMove);
+    this.rootRef.current?.removeEventListener('touchend', this.onTouchEnd);
     clearTimeout(this._wheelLock);
   }
   scrollToTop() {
